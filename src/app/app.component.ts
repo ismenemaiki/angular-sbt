@@ -7,14 +7,11 @@ declare var $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewChecked{
+export class AppComponent implements AfterViewChecked {
   title = 'sbt-angular';
 
   constructor(private router: Router) {}
 
-  jquery() {
-    this.router.navigate(['/jquery']);
-  }
   ngAfterViewChecked() {
     $('#click').on('click', () => {
       alert('teste jquery');

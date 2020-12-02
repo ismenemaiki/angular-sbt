@@ -1,0 +1,12 @@
+.apigithub {
+  display: flex;
+}
+.card {
+  padding: 10px;
+  margin: 5px;
+  max-width: 200px;
+}
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,1 +1,18 @@
-<p>funcional works!</p>
+<button type="button" class="btn btn-primary" (click)="getUsuariosGitHub()">  Buscar usuários </button>
+<button type="button" id="teste" class="btn btn-primary">  Teste </button>
+
+<div class="container-cards">
+  <div class="apigithub" *ngFor="let usuario of usuariosGit">
+    <div class="card" style="width: 18rem">
+      <img
+        src="{{ usuario?.avatar_url }}"
+        class="card-img-top"
+        alt="{{ usuario?.login }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ usuario?.login }}</h5>
+        <a href="{{ usuario?.html_url }}" class="btn btn-dark">git hub</a>
+      </div>
+    </div>
+  </div>
+</div>
