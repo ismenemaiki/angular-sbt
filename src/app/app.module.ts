@@ -1,3 +1,4 @@
+import { BsModalService } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,8 @@ import { FuncionalComponent } from './funcional/funcional.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { MenuComponent } from './menu/menu.component';
 import { TabelaComponent } from './funcional/tabela/tabela.component';
+import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
+import { PositioningService } from 'ngx-bootstrap/positioning';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,11 @@ import { TabelaComponent } from './funcional/tabela/tabela.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    BsModalService,
+    ComponentLoaderFactory,
+    PositioningService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

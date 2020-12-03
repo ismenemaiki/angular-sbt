@@ -26,7 +26,7 @@
   display: none;
 }
 .toggle-switch input:checked + .slider {
-  background-color: gray;
+  background-color: #007bff;
 }
 .toggle-switch input:checked + .slider::after {
   -webkit-transform: translateX(26px);
@@ -40,7 +40,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: grey;
+  background-color: #007bff;
   transition: 0.3s;
 }
 .toggle-switch .slider::after {
@@ -55,3 +55,8 @@
   transition: 0.5s;
 }
 
+.selected {
+  font-weight: bold;
+  color: #007bff;
+  font-size: large;
+}
