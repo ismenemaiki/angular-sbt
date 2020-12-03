@@ -1,0 +1,28 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "nome": "Maiki Rodrigues",
+      "endereco": "Rua Piracanjuba, 100",
+      "email": "maiki@gmail.com"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Eduarda",
+      "endereco": "Rua Limão, 999",
+      "email": "maria@hotmail.com"
+    },
+    {
+      "id": "1101",
+      "nome": "Piero Ribeiro",
+      "endereco": "Av. Paulista 1000",
+      "email": "piero@gmail.com"
+    },
+    {
+      "id": "3",
+      "nome": "Piero Ribeiro",
+      "endereco": "Av. Paulista 1000",
+      "email": "piero@gmail.com"
+    }
+  ]
+}

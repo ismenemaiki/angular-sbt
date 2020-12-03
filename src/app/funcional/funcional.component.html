@@ -1,6 +1,16 @@
-<button type="button" class="btn btn-primary" (click)="getUsuariosGitHub()">  Buscar usuários </button>
-<button type="button" id="teste" class="btn btn-primary">  Teste </button>
-
+<div class="conteudo-toggle">
+  <p>POST</p>
+  <label class="toggle-switch">
+    <input type="checkbox" [(ngModel)]="metodoGet" />
+    <div class="slider"></div>
+  </label>
+  <p>GET</p>
+</div>
+<hr>
+<div *ngIf="metodoGet">
+  <button type="button" class="btn btn-primary" (click)="getUsuariosGitHub()">
+    Buscar usuários
+  </button>
 <div class="container-cards">
   <div class="apigithub" *ngFor="let usuario of usuariosGit">
     <div class="card" style="width: 18rem">
@@ -15,4 +25,11 @@
       </div>
     </div>
   </div>
+</div>
+</div>
+<div class="container-tabela" *ngIf="!metodoGet">
+  <button type="button" id="post" class="btn btn-primary">
+    Adcionar Piero (Post)
+  </button>
+  <app-tabela *ngIf="dadosTabela" [dados]="dadosTabela"></app-tabela>
 </div>
