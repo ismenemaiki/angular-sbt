@@ -12,4 +12,12 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  menuResponsivo() {
+    const menuNav = document.getElementById('menu-nav');
+    if (menuNav.className === 'menu-nav') {
+      menuNav.className += ' responsive';
+    } else {
+      menuNav.className = 'menu-nav';
+    }
+  }
 }
