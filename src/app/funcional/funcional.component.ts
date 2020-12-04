@@ -15,10 +15,10 @@ export class FuncionalComponent implements OnInit, AfterViewChecked {
   usuariosGit: [];
   request2 = ajax.get(this.urlClientes);
   dadosTabela: [];
-  metodoGet = true;
+  metodoGet = false;
 
   controleChamada = false;
-  pessoa = {
+  cliente = {
     nome: '',
     email: ''
   };
@@ -36,8 +36,8 @@ export class FuncionalComponent implements OnInit, AfterViewChecked {
       if (this.controleChamada === false) {
       const usuario = {
         id: this.gerarId(1, 800),
-        nome: this.pessoa.nome,
-        email: this.pessoa.email
+        nome: this.cliente.nome,
+        email: this.cliente.email
       };
       $.ajax({
         url: this.urlClientes,
@@ -55,7 +55,7 @@ export class FuncionalComponent implements OnInit, AfterViewChecked {
         });
       this.getDadosTabela();
       this.modalRef.hide();
-      this.pessoa = { nome: '', email: '' };
+      this.cliente = { nome: '', email: '' };
       this.controleChamada = true;
     }
     });

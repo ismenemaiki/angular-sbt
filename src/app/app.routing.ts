@@ -1,3 +1,5 @@
+import { DetalhesComponent } from '../app/funcional/tabela/detalhes/detalhes.component';
+
 import { InicioComponent } from './inicio/inicio.component';
 import { FuncionalComponent } from './funcional/funcional.component';
 import { AppComponent } from './app.component';
@@ -21,6 +23,7 @@ import { NgModule } from '@angular/core';
       { path: '', component: InicioComponent },
       { path: 'home', component: InicioComponent },
       { path: 'jquery', component: FuncionalComponent },
+      { path: 'detalhes/:id', component: DetalhesComponent },
       { path: '**', redirectTo: 'home' }
     ])
   ],
